@@ -38,7 +38,7 @@ html body{
 }
 
 /* 相手の会話 */
-.line__left {
+.you {
     width: 100%;
     position: relative;
     display: block;
@@ -48,7 +48,7 @@ html body{
 }
 
 /* アイコン画像 */
-.line__left figure {
+.you figure {
     width: 50px;
     position: absolute;
     top: 15px;
@@ -59,13 +59,13 @@ html body{
 }
 
 /* 正方形を用意 */
-.line__left figure img{
+.you figure img{
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-.line__left .line__left-text {
+you {
   margin-left: 70px;
 }
 
@@ -84,7 +84,7 @@ html body{
 }
 
 /* 吹き出し */
-.line__left .text::after {
+.peer .peer::after {
   content: '';
   position: absolute;
   display: block;
@@ -98,7 +98,7 @@ html body{
 }
 
 /* 自分の会話 */
-.line__right {
+.peer {
     position: relative;
     display: block;
     margin: 5px 0;
@@ -109,7 +109,7 @@ html body{
 }
 
 /* コメントエリア */
-.line__right .text {
+.peer {
   padding: 10px;
   border-radius: 20px;
   background-color: #8de055;
@@ -118,7 +118,7 @@ html body{
 }
 
 /* 吹き出し */
-.line__right .text::after {
+.peer::after {
   content: '';
   position: absolute;
   display: block;
@@ -132,13 +132,13 @@ html body{
 }
 
 /* 自分がスタンプを送る時 */
-.line__right .stamp {
+.peer .stamp {
   position: relative;
   margin-left: 80px;
 }
 
 /* 既読エリア */
-.line__right .date {
+.peer .date {
   content: '';
   position: absolute;
   display: block;
