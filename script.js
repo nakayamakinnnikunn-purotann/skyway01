@@ -180,8 +180,8 @@ $(function() {
     });
     $('#step1, #step2').hide();
     $('#step3').show();
-    $('button').click(function() {
-        $('UI').hide();
+    $('pure-button').click(function() {
+        $('step1').hide();
     })
   }
 });
