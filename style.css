@@ -2,7 +2,7 @@
 //LINE風チャット画面(会話方式)を記事に表示する方法
 /////////////////////////////////////////////////*/
 
-html body{
+.line__container {
   padding:0;
   background: #7494c0;
   overflow: hidden;
@@ -12,7 +12,7 @@ html body{
 }
 
 /* タイトル部分 */
-.title {
+.line__container .line__title {
   background: #273246;
   padding: 10px;
   text-align: center;
@@ -21,24 +21,24 @@ html body{
 }
 
 /* 会話部分 */
-.line__contents {
+.line__container .line__contents {
   padding: 10px;
   overflow: hidden;
   line-height: 135%;
 }
 
-.scroll {
+.line__container .scroll {
   height: 500px;
   overflow-y: scroll;
 }
 
 /* スタンプ画像最大幅 */
-.stamp img {
+.line__container .stamp img {
   max-width:150px;
 }
 
 /* 相手の会話 */
-.you {
+.line__container .line__left {
     width: 100%;
     position: relative;
     display: block;
@@ -48,7 +48,7 @@ html body{
 }
 
 /* アイコン画像 */
-.you figure {
+.line__container .line__left figure {
     width: 50px;
     position: absolute;
     top: 15px;
@@ -59,23 +59,23 @@ html body{
 }
 
 /* 正方形を用意 */
-.you figure img{
+.line__container .line__left figure img{
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-you {
+.line__container .line__left .line__left-text {
   margin-left: 70px;
 }
 
-.line__left .line__left-text .name {
+.line__container .line__left .line__left-text .name {
   font-size: 80%;
   color: #ffffff;
 }
 
 /* コメントエリア */
-.line__left .text {
+.line__container .line__left .text {
   margin: 0;
   position: relative;
   padding: 10px;
@@ -84,7 +84,7 @@ you {
 }
 
 /* 吹き出し */
-.peer .peer::after {
+.line__container .line__left .text::after {
   content: '';
   position: absolute;
   display: block;
@@ -98,7 +98,7 @@ you {
 }
 
 /* 自分の会話 */
-.peer {
+.line__container .line__right {
     position: relative;
     display: block;
     margin: 5px 0;
@@ -109,7 +109,7 @@ you {
 }
 
 /* コメントエリア */
-.peer {
+.line__container .line__right .text {
   padding: 10px;
   border-radius: 20px;
   background-color: #8de055;
@@ -118,7 +118,7 @@ you {
 }
 
 /* 吹き出し */
-.peer::after {
+.line__container .line__right .text::after {
   content: '';
   position: absolute;
   display: block;
@@ -132,13 +132,13 @@ you {
 }
 
 /* 自分がスタンプを送る時 */
-.peer .stamp {
+.line__container .line__right .stamp {
   position: relative;
   margin-left: 80px;
 }
 
 /* 既読エリア */
-.peer .date {
+.line__container .line__right .date {
   content: '';
   position: absolute;
   display: block;
