@@ -2,7 +2,7 @@
 //LINE風チャット画面(会話方式)を記事に表示する方法
 /////////////////////////////////////////////////*/
 .button{
-  background: url(images/exit.png) left top no-repeat;
+  background: url(images/exit.png) ;
 }
 .line__container {
   padding:0;
