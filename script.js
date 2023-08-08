@@ -135,22 +135,22 @@ $(function() {
       const msg = $('#mymessage').val();
       // ルームに送って自分のところにも反映
       room.send(msg);
-      messages.prepend('<div class="line__right"><div><span class="you">You: </span>' + msg + '</div></div>');
+      messages.prepend('<div class="line__right">  <div class="text"><div><span class="you">You: </span>' + msg + '</div></div></div>');
       $('#mymessage').val('');
     });
 
     // チャットとかファイルが飛んできたらdataでonになる
     // ここではファイルは使わないのでもとのサンプルのif文はけしておく
     room.on('data', message => {
-      messages.prepend('<div class="line__left">"<div><span class="peer">' + message.src.substr(0,8) + '</span>: ' + message.data + '</div></div>');
+      messages.prepend('<div class="line__left">  <div class="text"><div><span class="peer">' + message.src.substr(0,8) + '</span>: ' + message.data + '</div></div></div>');
     });
 
     room.on('peerJoin', peerId => {
-      messages.prepend('<div class="line__left"><div><span class="peer">' + peerId.substr(0,8) + '</span>: has joined the room </div></div>');
+      messages.prepend('<div class="line__left">  <div class="text"><div><span class="peer">' + peerId.substr(0,8) + '</span>: has joined the room </div></div></div>');
     });
 
     room.on('peerLeave', peerId => {
-      messages.prepend('<div class="line__left"><div><span class="peer">' + peerId.substr(0,8) + '</span>: has left the room </div></div>');
+      messages.prepend('<div class="line__left">  <div class="text"><div><span class="peer">' + peerId.substr(0,8) + '</span>: has left the room </div></div></div>');
     });
 
     // streamが飛んできたら相手の画面を追加する
