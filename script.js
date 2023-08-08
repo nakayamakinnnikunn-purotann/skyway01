@@ -123,7 +123,7 @@ $(function() {
   function step3(room) {
     // chatboxを追加する
     const chatbox = $('<div></div>').addClass('chatbox').attr('id', 'chatbox-'+room.name);
-    const header = $('<div class=line__title></div>').html('<p><input type="submit" class="button" value="＜" src="./exit.png" onclick="window.location.reload();" /></p></div><strong>' + room.name + '</strong>');
+    const header = $('<div class=line__title></div>').html('<input type="submit" class="button" value="▩▩▩EXIT▩▩▩" src="./exit.png" onclick="window.location.reload();" /></div><strong>' + room.name + '</strong>');
     const messages = $('<div class="line__left"><div><em>Peer connected.</em></div></div>').addClass('messages');
     chatbox.append(header);
     chatbox.append(messages);
